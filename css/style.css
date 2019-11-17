@@ -1,4 +1,5 @@
 body{
+    margin: 10px;
     padding: 10px;
     color: #091E3A;
     text-align: center;
@@ -8,8 +9,9 @@ body{
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: minmax(200px, auto);
     grid-template-areas: 
-    "header header header header header"
-    "main main main main main"
+    "header header header header header"    
+    "section section section section section"
+    "main main main main main";
     
 }
 #nav{
@@ -38,25 +40,23 @@ body{
     border-radius: 20px;
 }
 
-main{
+section{
     height: 250px;
     display: grid;
     font-weight: bold;
     color: #091E3A;
-    grid-area: main;  
+    grid-area: section;  
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(100px, auto);
     grid-template-areas: 
     "yourbiz yourbiz computer computer" 
-    "reason reason computer computer"
-    "tour tour computer computer"
-    
-   
+    "reason reason . ."
+    "tour tour . ." ;   
 }
 
 .yourbiz{
     grid-area: yourbiz;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .reason{
@@ -69,6 +69,7 @@ main{
 
 .tour{
     grid-area: tour;
+    font-weight: lighter;
 }
 .tour a{
     text-decoration: none;
@@ -76,11 +77,66 @@ main{
     border-radius: 20px;
     color: #091E3A;
     padding: 15px;
+    font-weight: bold;
 }
 
 .computer{
-    grid-area: computer;
-    
-    
+    grid-area: computer;  
+    height: 480px;
 }
 
+main{
+    grid-area: main;
+    margin-top: 230px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "heading heading heading heading heading"
+    "were were were were were"
+    ". oneptext . aside aside"
+    "aside2 aside2 . twoptext ."
+    ;
+}
+#heading{
+    grid-area: heading;
+}
+.were{
+    grid-area: were;
+}
+.oneptext{
+    grid-area: oneptext;
+}
+.aside{
+    text-align: left;
+    grid-area: aside;
+    justify-content: center;
+    line-height: 24px;
+    
+}
+.learnmore{
+    margin-top: 10px;
+    text-decoration: none;
+    border: 2px solid #091E3A;
+    border-radius: 20px;
+    color: #091E3A;
+    padding: 5px;
+    font-weight: bold;
+    
+}
+.recurr{
+    text-decoration: none;
+    font-size: 13px;
+}
+.aside2{
+    grid-area: aside2;
+    text-align: right;
+    justify-content: center;
+    line-height: 24px;
+    margin-top: 100px;
+}
+.twoptext{
+    grid-area: twoptext;
+    margin-top: 100px;
+}
