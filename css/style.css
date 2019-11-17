@@ -97,6 +97,7 @@ main{
     "were were were were were"
     ". oneptext . aside aside"
     "aside2 aside2 . twoptext ."
+    ". threeptext . aside3 aside3"
     ;
 }
 #heading{
@@ -119,7 +120,6 @@ main{
     margin-top: 10px;
     text-decoration: none;
     border: 2px solid #091E3A;
-    border-radius: 20px;
     color: #091E3A;
     padding: 5px;
     font-weight: bold;
@@ -138,5 +138,16 @@ main{
 }
 .twoptext{
     grid-area: twoptext;
+    margin-top: 100px;
+}
+.aside3{
+    grid-area: aside3;
+    text-align: left;
+    justify-content: center;
+    line-height: 24px;
+    margin-top: 100px;
+}
+.threeptext{
+    grid-area: threeptext;
     margin-top: 100px;
 }
